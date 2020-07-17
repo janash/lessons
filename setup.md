@@ -5,11 +5,20 @@ title: Setup
 # Setup
 Participation in the MSSE Bootcamp will require use of your own personal computer or laptop and installation of some software.
 
-Please follow the instructions given here to make sure you have the necessary software installed. We will be using Python and the conda package manager from Anaconda. If you are on MacOS or Linux and you already have Anaconda (or miniconda) installed, skip to the compilers portion of these set-up instructions. If you do not have Anaconda or miniconda installed please see the appropriate section in "Installing Anaconda".
+Please follow the instructions given here to make sure you have the necessary software installed. We will be using Python and the conda package manager from Anaconda. If you are on MacOS or Linux and you already have Anaconda (or miniconda) installed, skip to the compilers portion of these set-up instructions. If you do not have Anaconda or miniconda installed please see the appropriate section below.
 
-Please read this page in its entirety. After you have installed miniconda, there are instructions for creating an environment using conda. 
+First see the appropriate section in the Operating System Specific Instructions, then everyone should do the portion in "Installation Instructions for Everyone".
 
-Installation varies by operating system (OS).
+## Operating System Specific Installation Instructions
+Pick the appropriate operating system and follow these instuctions
+1. [MacOS miniconda and compiler installation](#mac-os)
+1. [Linux miniconda and compiler installation](#linux)
+1. [Windows miniconda and compilr installation](#windows)
+
+## Installation Instructions for Everyone
+1. [Creating a conda environment - ALL USERS](#creating-a-conda-environment)
+1. [Setting up and configuring git - ALL USERS](#installing-and-configuring-git)
+1. [Installing a text editor - ALL USERS](#text-editor)
 
 ## Mac OS
 
@@ -67,7 +76,7 @@ sudo apt install build-essential
 After this command has completed, proceed to the next section [Creating a MSSE Bootcamp conda environment](#creating-a-msse-bootcamp-conda-environment).
 
 
-# Creating a MSSE Bootcamp conda environment
+# Creating a conda environment
 Everyone should complete and read this section after installing miniconda.
 
 To make a great deal of compilation and installation simpler we will create a conda environment. Environments isolate software from this project from the rest of the dependencies on your laptop.
@@ -105,7 +114,7 @@ conda deactivate
 {: .language-bash}
 
 
-## Installing and configuring git <a name="git_configuration"></a>
+## Installing and configuring git
 
 ### Installation
 We will be using the `git` software for version control during this course. This portion walks you through installing and configuring `git`.
@@ -158,7 +167,7 @@ You can check the configuration commands that you have set using:
 git config --list
 ~~~
 
-## Text Editor/IDE
+## Text Editor
 Everyone should have a text editor they can use to edit Python. If you do not have a preference for text editors, we recommend [Visual Studio Code](https://code.visualstudio.com/). If you are using WSL, see [these instructions](https://code.visualstudio.com/docs/remote/wsl) for installing Visual Studio Code for use with WSL
 
 
