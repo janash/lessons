@@ -5,29 +5,45 @@ title: Setup
 # Setup
 Participation in the MSSE Bootcamp will require use of your own personal computer or laptop and installation of some software.
 
-Please follow the instructions given here to make sure you have the necessary software installed. We will be using Python and the conda package manager from Anaconda. We will be installing both using `miniconda`. Another option would be to install Anaconda. If you have Anaconda installed already, you should be fine, it will work for all of our excercises.
+Please follow the instructions given here to make sure you have the necessary software installed. We will be using Python and the conda package manager from Anaconda. If you are on MacOS or Linux and you already have Anaconda (or miniconda) installed, skip to the compilers portion of these set-up instructions. If you do not have Anaconda or miniconda installed please see the appropriate section in "Installing Anaconda".
 
-Both miniconda and Anaconda include a Python distribution and the `conda` package manager. However, Anaconda includes several python libraries bundled alongside as well. We choose miniconda because it takes up less space and we can add the packages we need as we need them. If you would prefer to install Anaconda, you are free to do that.
-
-Again, please read this page in its entirety. After you have installed miniconda, there are instructions for creating an environment using conda. 
+Please read this page in its entirety. After you have installed miniconda, there are instructions for creating an environment using conda. 
 
 Installation varies by operating system (OS).
 
-## Windows
-If your computer uses the Windows operating system, we strongly recommend installing Windows Subsystem for Linux (WSL). Follow the installation instructions at [this link](https://docs.microsoft.com/en-us/windows/wsl/install-win10). See theIf you don’t have a preference on Linux distribution, we recommend installing Ubuntu 20.04. 
+## Mac OS
 
-Once WSL is installed, open your ‘Start’ menu and choose ‘Ubuntu’. This should open a terminal window. The first time you have opened Ubuntu, you will see a message which says “Installing, this may take a few minutes…”. After the installation is done, you will have to create a username and password. After these are created, you should be able to use the terminal.
+### Anaconda Installation
+You can download and run the installer at this [link](https://docs.conda.io/en/latest/miniconda.html).
 
-For the WSL, you have to install miniconda from the terminal in your Linux operating system. Note that if you if you are using the WSL, your Linux OS is completely separated from your Windows operating system. This means that software installed on one operating system is not available in the other.
+### Compilers
+MacOS users should [install XCode](https://developer.apple.com/xcode/). An easy way to install XCode is through the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
 
-You are now using a Linux OS under Windows. For the rest of the install instructions, see the Linux section, below.
+After installing XCode, proceed to the next section [Creating a MSSE Bootcamp conda environment](#creating-a-msse-bootcamp-conda-environment).
 
 ## Linux
 
-If you are on Linux (not WSL), you can download and run the installer at this [link](https://docs.conda.io/en/latest/miniconda.html). If you are using the WSL or would like to use the command line to install, see the instructions below.
+### Anaconda Installation
+You can download and run the installer at this [link](https://docs.conda.io/en/latest/miniconda.html).
 
-To install miniconda from the command line, execute the following lines in your terminal:  
+### Compilers
+After installing miniconda, you will need to install compilers for the C++ section of the course. Use this command to install compilers
+~~~
+sudo apt install build-essential
+~~~
+{: .language-bash}
 
+After this command has completed, proceed to the next section [Creating a MSSE Bootcamp conda environment](#creating-a-msse-bootcamp-conda-environment).
+
+## Windows
+If your computer uses the Windows operating system, we require installing Windows Subsystem for Linux (WSL). Follow the installation instructions at [this link](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If you don’t have a preference on Linux distribution, we recommend installing Ubuntu 20.04. 
+
+Once WSL is installed, open your ‘Start’ menu and choose ‘Ubuntu’. This should open a terminal window. The first time you have opened Ubuntu, you may see a message which says “Installing, this may take a few minutes…”. After the installation is done, you will have to create a username and password. After these are created, you should be able to use the terminal.
+
+The Windows Subsystem for Linux is like running another computer inside your computer. It is a different operating system and has different software installed than your Windows computer. For the WSL, you have to install miniconda from the terminal in your Linux operating system. Note that if you if you are using the WSL, your Linux OS is completely separated from your Windows operating system. This means that software installed on one operating system is not available in the other.
+
+### WSL Miniconda Installation
+You are now using a Linux OS under Windows. You must install miniconda from the command line. From your terminal execute the following lines:  
 ~~~
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
@@ -48,27 +64,7 @@ sudo apt install build-essential
 ~~~
 {: .language-bash}
 
-## Mac OS and Linux
-
-You can download and run the installer at this [link](https://docs.conda.io/en/latest/miniconda.html). If you are using the WSL or would like to use the command line to install, see the instructions below.
-
-To install miniconda from the command line, execute the following lines in your terminal:  
-
-~~~
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-bash Miniconda3-latest-MacOSX-x86_64.sh
-~~~
-{: .language-bash}
-
-After installation, close and reopen your terminal window. If you do not see (base) before your username on the command line, type
-
-~~~
-conda init
-~~~
-{: .language-bash}
-
-### Compilers
-MacOS users should also [install XCode](https://developer.apple.com/xcode/). An easy way to install XCode is through the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
+After this command has completed, proceed to the next section [Creating a MSSE Bootcamp conda environment](#creating-a-msse-bootcamp-conda-environment).
 
 
 # Creating a MSSE Bootcamp conda environment
